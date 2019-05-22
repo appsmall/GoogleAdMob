@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="biB-Z2-FoU">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Google AdMob-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoogleAdMobDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntB-mT-win">
+                                <rect key="frame" x="158" y="460" width="98" height="30"/>
+                                <state key="normal" title="Interstitial Ads"/>
+                                <connections>
+                                    <action selector="interstitialBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFL-0R-K9S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7N-10-DNE">
+                                <rect key="frame" x="167.5" y="400" width="79" height="30"/>
+                                <state key="normal" title="Banner Ads"/>
+                                <connections>
+                                    <action selector="bannerAdsBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y3Q-QO-fTK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xk3-6h-9ea">
+                                <rect key="frame" x="144.5" y="520" width="125" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fFE-LL-9gV"/>
+                                </constraints>
+                                <state key="normal" title="Reward Video Ads"/>
+                                <connections>
+                                    <action selector="rewardVideoAdBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JUN-Uc-ZWg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdx-5C-9t0">
+                                <rect key="frame" x="170" y="585" width="74" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="3Um-va-47Y"/>
+                                </constraints>
+                                <state key="normal" title="Native Ads"/>
+                                <connections>
+                                    <action selector="nativeAdsBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuf-iW-jRx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ntB-mT-win" firstAttribute="centerX" secondItem="OKM-uX-P4A" secondAttribute="centerX" id="4sf-5g-jVs"/>
+                            <constraint firstItem="ntB-mT-win" firstAttribute="top" secondItem="c7N-10-DNE" secondAttribute="bottom" constant="30" id="6jU-st-0Cf"/>
+                            <constraint firstItem="ntB-mT-win" firstAttribute="centerY" secondItem="OKM-uX-P4A" secondAttribute="centerY" id="CaL-Fn-qa4"/>
+                            <constraint firstItem="Jdx-5C-9t0" firstAttribute="top" secondItem="Xk3-6h-9ea" secondAttribute="bottom" constant="30" id="PlN-Qc-PEu"/>
+                            <constraint firstItem="c7N-10-DNE" firstAttribute="centerX" secondItem="OKM-uX-P4A" secondAttribute="centerX" id="V1m-8i-yxB"/>
+                            <constraint firstItem="Xk3-6h-9ea" firstAttribute="centerX" secondItem="OKM-uX-P4A" secondAttribute="centerX" id="hbr-Lq-kIR"/>
+                            <constraint firstItem="Jdx-5C-9t0" firstAttribute="centerX" secondItem="OKM-uX-P4A" secondAttribute="centerX" id="knu-C2-Z3D"/>
+                            <constraint firstItem="Xk3-6h-9ea" firstAttribute="top" secondItem="ntB-mT-win" secondAttribute="bottom" constant="30" id="vgs-Tp-fdl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OKM-uX-P4A"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Google AdMob" id="ffw-5s-4Cf"/>
+                    <connections>
+                        <segue destination="xdh-2n-SHa" kind="show" identifier="ViewControllerToInterstitialVC" id="BVI-fg-56A"/>
+                        <segue destination="bnz-ko-g27" kind="show" identifier="ViewControllerToBannerVC" id="Yf1-yo-Xde"/>
+                        <segue destination="N67-TU-XJe" kind="show" identifier="ViewControllerToRewardVideoAdVC" id="sEj-mw-7co"/>
+                        <segue destination="VYH-wM-gi5" kind="show" identifier="ViewControllerToNativeAdsVC" id="kMa-s0-hzm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.91304347826099" y="140.625"/>
+        </scene>
+        <!--InterstitialVC-->
+        <scene sceneID="0fY-2h-eXy">
+            <objects>
+                <viewController id="xdh-2n-SHa" customClass="InterstitialVC" customModule="GoogleAdMobDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dMO-NM-0jF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ien-g0-EGW">
+                                <rect key="frame" x="158" y="460" width="98" height="30"/>
+                                <state key="normal" title="Interstitial Ads"/>
+                                <connections>
+                                    <action selector="openInterstitialAdBtnPressed:" destination="xdh-2n-SHa" eventType="touchUpInside" id="17U-zU-jKg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ien-g0-EGW" firstAttribute="centerX" secondItem="mpG-m8-72c" secondAttribute="centerX" id="Fy3-tt-O2M"/>
+                            <constraint firstItem="ien-g0-EGW" firstAttribute="centerY" secondItem="mpG-m8-72c" secondAttribute="centerY" id="KJl-Nh-ZTf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mpG-m8-72c"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cpj-IL-iwl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="1015"/>
+        </scene>
+        <!--BannerVC-->
+        <scene sceneID="wTK-tf-oCi">
+            <objects>
+                <viewController id="bnz-ko-g27" customClass="BannerVC" customModule="GoogleAdMobDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VDn-vL-aIj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ypp-w9-PIs" customClass="GADBannerView">
+                                <rect key="frame" x="47" y="792" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CM2-bc-56R"/>
+                                    <constraint firstAttribute="width" constant="320" id="kqV-uB-qdX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Pi-s3-hKQ" firstAttribute="bottom" secondItem="ypp-w9-PIs" secondAttribute="bottom" constant="20" id="ibw-Fe-7Uu"/>
+                            <constraint firstItem="ypp-w9-PIs" firstAttribute="centerX" secondItem="5Pi-s3-hKQ" secondAttribute="centerX" id="us8-GY-joo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Pi-s3-hKQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="ypp-w9-PIs" id="5MJ-Cy-jem"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6iM-FY-Lvl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97" y="1015"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aBK-3K-53M">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="biB-Z2-FoU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CqT-5x-sVz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hc8-9E-z5v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Wo-ti-OXR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="140.625"/>
+        </scene>
+        <!--Reward VideoVC-->
+        <scene sceneID="WUm-cL-Kfp">
+            <objects>
+                <viewController id="N67-TU-XJe" customClass="RewardVideoVC" customModule="GoogleAdMobDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NiC-Qb-Ses">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yi-JB-QRA">
+                                <rect key="frame" x="124" y="460" width="166" height="30"/>
+                                <state key="normal" title="Open Reward Video Ads"/>
+                                <connections>
+                                    <action selector="openRewardVideoAdsBtnPressed:" destination="N67-TU-XJe" eventType="touchUpInside" id="hHN-Hn-045"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4yi-JB-QRA" firstAttribute="centerY" secondItem="DXU-VI-sjV" secondAttribute="centerY" id="SWX-EJ-3PS"/>
+                            <constraint firstItem="4yi-JB-QRA" firstAttribute="centerX" secondItem="DXU-VI-sjV" secondAttribute="centerX" id="mC7-qd-Y8Q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DXU-VI-sjV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x6l-Gn-9qX" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1500" y="1015"/>
+        </scene>
+        <!--Native AdsVC-->
+        <scene sceneID="RwD-sx-8Ga">
+            <objects>
+                <viewController id="VYH-wM-gi5" customClass="NativeAdsVC" customModule="GoogleAdMobDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dq6-W4-HyU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Advertiser" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zzk-cm-Tmv">
+                                <rect key="frame" x="41.5" y="413.5" width="331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKE-sL-Ixl">
+                                <rect key="frame" x="41.5" y="464.5" width="331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQq-Q7-NYK">
+                                <rect key="frame" x="41.5" y="515.5" width="331" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fQq-Q7-NYK" firstAttribute="top" secondItem="mKE-sL-Ixl" secondAttribute="bottom" constant="30" id="H1F-nT-gvr"/>
+                            <constraint firstItem="Zzk-cm-Tmv" firstAttribute="width" secondItem="mKE-sL-Ixl" secondAttribute="width" id="HvM-IF-2a6"/>
+                            <constraint firstItem="Zzk-cm-Tmv" firstAttribute="centerX" secondItem="Hq9-5o-b6C" secondAttribute="centerX" id="MFF-B4-7Wz"/>
+                            <constraint firstItem="mKE-sL-Ixl" firstAttribute="width" secondItem="dq6-W4-HyU" secondAttribute="width" multiplier="0.8" id="RvJ-nn-r7R"/>
+                            <constraint firstItem="mKE-sL-Ixl" firstAttribute="centerX" secondItem="Hq9-5o-b6C" secondAttribute="centerX" id="U7W-fO-TEr"/>
+                            <constraint firstItem="mKE-sL-Ixl" firstAttribute="top" secondItem="Zzk-cm-Tmv" secondAttribute="bottom" constant="30" id="fYe-G1-sdX"/>
+                            <constraint firstItem="fQq-Q7-NYK" firstAttribute="centerX" secondItem="Hq9-5o-b6C" secondAttribute="centerX" id="nox-bW-kGx"/>
+                            <constraint firstItem="mKE-sL-Ixl" firstAttribute="centerY" secondItem="Hq9-5o-b6C" secondAttribute="centerY" id="q9S-KR-QZu"/>
+                            <constraint firstItem="fQq-Q7-NYK" firstAttribute="width" secondItem="mKE-sL-Ixl" secondAttribute="width" id="wbH-Rr-O9c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hq9-5o-b6C"/>
+                    </view>
+                    <connections>
+                        <outlet property="label1" destination="Zzk-cm-Tmv" id="g5B-GI-Xeg"/>
+                        <outlet property="label2" destination="mKE-sL-Ixl" id="fnP-QH-5To"/>
+                        <outlet property="label3" destination="fQq-Q7-NYK" id="oHB-L2-OQm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xw5-P4-5Vc" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2270" y="1015"/>
+        </scene>
+    </scenes>
+</document>
